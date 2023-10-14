@@ -1,52 +1,689 @@
-* {
+*{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/*Styling dor the green backgroud at the landing page*/
+#banner{
+    
+    background: linear-gradient(rgba(3,0,0,0.2), #909292), url(./images/IT-Support.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
 }
 
-/* Define basic styles for the body and header */
-body {
-    font-family: Arial, sans-serif;
-}
-
-header {
-    background-color: #333;
+.banner-text{
+    text-align: center;
     color: #fff;
-    padding: 10px 0;
+    padding-top: 350px;
+}
+/* Default styles for larger screens */
+.banner-text h1 {
+    font-size: 600%;
+    font-family: 'Kalam';
+}
+
+.banner-text h2 {
+    font-size: 350%;
+    font-family: 'Kalam';
+    margin-bottom: -10px;
+}
+
+.banner-text p {
+    font-size: 24px;
+    font-style: italic;
+    margin: 0 auto;
+}
+
+/* Media query for screens up to 768px */
+@media screen and (max-width: 768px) {
+    .banner-text{
+        padding-top: 450px;
+    }
+    
+    .banner-text h1 {
+        font-size: 300%; 
+    }
+
+    .banner-text h2 {
+        font-size: 200%; 
+    }
+
+    .banner-text p {
+        font-size: 16px;
+    }
+}
+
+
+/* Style for the navigation bar */
+.navbar {
+    background-color: #3986bd; /* Set the background color of the navbar */
+    overflow: hidden;
+    position: fixed; /* Fixed position to keep it at the top of the viewport */
+    width: 100%; /* Take up the full width of the viewport */
+    z-index: 100; /* Ensure it's on top of other elements */
+  }
+  
+  /* Style for the navigation list items */
+  .nav-list {
+    list-style-type: none; /* Remove list bullet points */
+    margin: 0;
+    padding: 10px;
+    overflow: hidden; /* Center the list items horizontally */
+    text-align: center;
+  }
+  
+  .nav-item {
+    display: inline-block; /* Display list items horizontally */
+    margin: 0 10px; /* Add spacing between list items */
+    position: relative;
+  }
+  
+  /* Style for the navigation links */
+  .nav-item a {
+    color: #fff; /* Set link text color to white */
+    text-decoration: none; /* Remove underlines from links */
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  /* Style for the navigation icon button */
+.nav-icon {
+    display: none; /* Initially hide the navigation icon on larger screens */
+    background-color: #3986bd;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    padding: 10px 15px;
+    cursor: pointer;
+    float: right;
+}
+.nav-hidden {
+    display: none;
+}
+
+/* Media query to make the navbar responsive */
+@media screen and (max-width: 768px) {
+    .nav-list {
+      display: none; /* Hide the navigation list on small screens */
+      right: 0; /* Slide in from the right when active */
+    }
+
+    .nav-icon {
+      display: block;
+      margin-top: -10px; /* Display the navigation icon on small screens */
+    }
+
+    /* Show the navigation list when the navigation icon is clicked */
+    .nav-icon:focus + .nav-list,
+    .nav-list.active {
+        display: block;
+        position: absolute;
+        left: 0;
+    }
+
+    .nav-item a {
+        font-size: 10px;
+    }
+    .navbar {
+        background-color: #3986bd; /* Set the background color of the navbar */
+        overflow: hidden;
+        position: fixed; /* Fixed position to keep it at the top of the viewport */
+        width: 100%; /* Take up the full width of the viewport */
+        z-index: 100;/* Ensure it's on top of other elements */
+      }
+}
+
+  
+/* Style for the about section */
+.about{
+    padding: 100px;
+    margin: auto;
+}
+.container-who{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.img-section{
+    flex: 1;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideIn 1s forwards;
+}
+.img-section img{
+    max-width: 70%;
+    height: auto;
+    border-radius: 10px;
+}
+.content-section{
+    flex: 1;
+    margin: 60px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.5s;
+    margin-bottom: 40px;
+}
+.content-section h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #3986bd;
+}
+.content-section p{
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+}
+.content-section .button{
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 17px;
+    background-color: #3986bd;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 15px;
+    transition: 0.5s ease;
+    border-radius: 7px;
+}
+.content-section .button:hover{
+    background-color: #508ebb;
+}
+
+/*This code sets the fade in action when the page is relaoded at Aims section*/
+@keyframes slideIn{
+    from{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*Media querry for the image image of aim*/
+@media screen and (max-width: 770px) {
+    .about{
+        flex-direction: column;
+    }
+    .img-section, .content-section{
+        flex: 100%;
+        margin: auto;
+        text-align: center;
+        padding: 0px;
+    }
+    .img-section img{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .content-section .button{
+        margin-bottom: 15px;
+    }
+    .content-section{
+        margin: 15px;
+    }
+    .content-section h2{
+        font-size: 25px;
+    }
+    .content-section p{
+        line-height: 1.5;
+        font-size: 15px;
+    }
+}
+
+/* Style for the skills section */
+
+#skills h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #3986bd;
+    margin-left: 60px;
+}
+.container-skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    margin-left: 80px;
+}
+
+.container-skills h3{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.content-right{
+    flex: 1;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.5s;
+    margin-bottom: 40px;
+}
+
+.content-left{
+    flex: 1;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.5s;
+    margin-bottom: 40px;
+}
+
+.content-left ul li, .content-right ul li {
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+
+}
+
+/*This code sets the fade in action when the page is relaoded at Aims section*/
+@keyframes slideIn{
+    from{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*Media querry for skills*/
+@media screen and (max-width: 770px) {
+#skills h2{
+    font-size: 20px;
+    margin-bottom: 15px;
+    margin-left:30px;
+}
+.container-skills {
+    display: flex;
+    flex-wrap: row;
+    justify-content: center;
+    align-items: stretch;
+    margin-left: 10px;
+}
+
+.container-skills h3{
+    font-size: 14px;
+    margin-bottom: 15px;
+    margin-top: 0;
+    margin-left: 30px;
+    text-align: left;
+}
+.content-left ul li, .content-right ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.2;
+    text-align: left;
+    margin-left: 30px;
+    padding-right: 20px;
+}
+.content-right ul li {
+    margin-left: 5px;
+}
+}
+
+/* Style for experience section */
+#experience {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#experience h2{
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #3986bd;
+    margin-left: 60px;
+}
+
+#experience h3{
+    font-size: 20px;
+    margin-bottom: 0;
+    line-height: 1;
+    margin-bottom: 3px;
+
+}
+
+#experience h4{
+    font-size: 18px;
+
+}
+
+#experience h5{
+    margin-bottom: 10px;
+    color: #555555;
+
+
+}
+
+.content-experience {
+    flex-basis: calc(33.33% - 10px); /* 10px is the margin between columns */
+    margin-bottom: 20px;
+    padding: 10px;
+    padding-left: 35px;
+    border: 1px solid #ccc;
+    background-color: #f7f7f7;
+    text-align: left;
+
+}
+
+.content-experience ul li {
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 1.2;
+    text-align: justify;
+    margin-left: 50px;
+}
+
+.content-experience {
+
+    line-height:2;
+}
+/*Media querry for experience*/
+@media screen and (max-width: 770px) {
+    #experience h2{
+        font-size: 20px;
+        margin-bottom: 15px;
+        margin-left:30px;
+    }
+
+    #experience h3{
+    font-size: 17px;
+    margin-bottom: 0;
+    line-height: 1;
+    margin-bottom: 3px;
+    margin-left: -20px;
+}
+
+#experience h4{
+    font-size: 14px;
+    margin-left: -20px;
+}
+
+#experience h5{
+    font-size: 12px;
+    margin-bottom: 10px;
+    margin-left: -18px;
+
+}
+
+.content-experience ul li{
+        margin-bottom: 10px;
+        font-size: 14px;
+        line-height: 1;
+        text-align: justify;
+        margin-left: 0px;
+        padding-right: 20px;
+    }
+}
+
+/* Style for the education section */
+#education {
+    margin: 20px 0;
+}
+
+#education h2{
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #3986bd;
+    margin-left: 60px;
+}
+
+.container-education {
+    display: block;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.content-education {
+    flex-basis: calc(33.33% - 10px); /* 10px is the margin between columns */
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f7f7f7;
+    text-align: left;
+    line-height: 1.5;
+    padding-left: 40px;
+}
+
+.content-education h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.content-education h4 {
+    font-size: 16px;
+}
+
+.content-education h5 {
+    font-size: 14px;
+    color: #555;
+}
+
+/*Media querry for education*/
+@media screen and (max-width: 770px) {
+    #education h2{
+        font-size: 20px;
+        margin-bottom: 15px;
+        margin-left:30px;
+    }
+}
+/* Style for the certification section */
+#certification {
+    margin: 20px 0;
+}
+
+#certification h2{
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #3986bd;
+    margin-left: 60px;
+}
+
+.container-certification {
+    display: block;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.content-certification {
+    flex-basis: calc(33.33% - 10px); /* 10px is the margin between columns */
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f7f7f7;
+    text-align: left;
+    line-height: 1.5;
+    padding-left: 40px;
+}
+
+.content-certification h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.content-certification h4 {
+    font-size: 16px;
+}
+
+.content-certification h5 {
+    font-size: 14px;
+    color: #555;
+}
+
+/*Media querry for certification*/
+@media screen and (max-width: 770px) {
+    #certification h2{
+        font-size: 18px;
+        margin-bottom: 15px;
+        margin-left:30px;
+    }
+}
+/* Style for the certification section */
+#project {
+    margin: 20px 0;
+}
+
+#project h2{
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #3986bd;
+    margin-left: 60px;
+}
+
+.container-project {
+    display: block;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.content-project {
+    flex-basis: calc(33.33% - 10px); /* 10px is the margin between columns */
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f7f7f7;
+    text-align: left;
+    line-height: 1.5;
+    padding-left: 40px;
+}
+
+.content-project h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.content-project h4 {
+    font-size: 16px;
+}
+
+.content-project h5 {
+    font-size: 14px;
+    color: #555;
+}
+
+#project .button{
+    text-decoration: none;
+    color: #555555;
+    font-weight: bold;
+}
+/*Media querry for project*/
+@media screen and (max-width: 770px) {
+    #project h2{
+        font-size: 18px;
+        margin-bottom: 15px;
+        margin-left:30px;
+    }
+}
+
+/*This is the footer styling*/
+#footer {
+    background-color: #3986bd;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.container-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.container-footer p {
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.container-footer h3{
+    margin-left: 250px;
+    margin-top: 10px;
     text-align: center;
 }
 
-/* Style the navigation menu */
-nav ul {
-    list-style: none;
-}
-
-nav li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav a {
+.container-footer a{
     text-decoration: none;
-    color: #fff;
+    color: #f7f7f7;
 }
 
-/* Style sections */
-section {
-    margin: 20px;
+/* Style for the Bio-Data section */
+.bio-data {
+    flex-basis: calc(50% - 10px); /* Two columns, with a small margin in between */
     padding: 20px;
-    border: 1px solid #ccc;
+    }
+
+.bio-data h2 {
+    text-align: center;
+}
+/* Style for the Contact Me section */
+.contact {
+    flex-basis: calc(50% - 10px); /* Two columns, with a small margin in between */
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
-/* Add media queries for responsiveness */
-@media (max-width: 768px) {
-    nav ul {
+@media screen and (max-width: 770px){
+    #footer {
+        padding: 20px 0;
         text-align: center;
-        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
     }
+    
+    
+    .container-footer p {
+        font-size: 12px;
+        margin-left: -5px;
+        padding: 10px;
+        text-decoration: none;
+        line-height: 1.5;
+    }
+    
+    .container-footer h3{
+        margin-left: 15%;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .container-footer a{
+        text-decoration: none;
+        color: #fff;
+    }
+}
 
-    nav li {
-        display: block;
-        margin: 10px 0;
-    }
+.footer-copyright {
+    font-size: 8px;
+    bottom: 0;
+    text-align: center;
 }
