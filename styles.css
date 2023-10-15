@@ -255,7 +255,7 @@ body {
         margin-bottom: 15px;
     }
     .content-section{
-        margin: 15px;
+        margin: 15px 0;
     }
     .content-section h2{
         font-size: 1.2rem;
@@ -333,7 +333,7 @@ body {
 @media screen and (max-width: 768px) {
 #skills h2{
     font-size: 1.2rem;
-    margin: 15px;
+    margin: 15px 0;
 }
 .container-skills {
     display: flex;
@@ -356,7 +356,7 @@ body {
     margin-left: 0px;
 }
 .content-right ul li {
-    margin: 10px;
+    margin: 10px 0;
 }
 }
 
@@ -607,7 +607,7 @@ body {
 @media screen and (max-width: 768px) {
     #project h2{
         font-size: 1.2rem;
-        margin: 15px 20px;
+        margin: 15px 20;
     }
 }
 
@@ -635,8 +635,9 @@ body {
 }
 
 .container-footer h3{
-    margin: 10px;
+    margin: 10px 0;
     text-align: center;
+    padding: 0 150px;
 }
 
 .container-footer a{
@@ -681,7 +682,7 @@ body {
     .container-footer h3{
         font-size: 1rem;
         text-align: right;
-        margin: 0 200px;
+
     }
     
     .container-footer a{
