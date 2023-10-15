@@ -109,7 +109,7 @@ body {
 /* Media query to make the navbar responsive */
 @media screen and (max-width: 768px) {
     .banner-text {
-        padding: 150px 0; /* Adjust as needed */
+        padding: 200px 0; /* Adjust as needed */
     }
 
     .banner-text h1 {
@@ -237,7 +237,7 @@ body {
     }
 }
 
-/*Media querry for the image image of aim*/
+/*Media querry for the about*/
 @media screen and (max-width: 768px) {
     .about{
         flex-direction: column;
@@ -272,12 +272,14 @@ body {
     font-size: 1.5rem;
     margin: 20px 0;
     color: #3986bd;
+    margin: 0 30px;
 }
 .container-skills {
     display: flex;
     flex-direction: wrap;
     justify-content: center;
     align-items: stretch;
+    margin: 0 10px;
 }
 
 .container-skills h3{
@@ -298,7 +300,7 @@ body {
 
 .content-left ul li,
 .content-right ul li {
-    margin: 10px 0;
+    margin: 10px 15px;
     font-size: 1rem;
     line-height: 1.6;
     text-align: justify;
@@ -331,7 +333,7 @@ body {
 @media screen and (max-width: 768px) {
 #skills h2{
     font-size: 1.2rem;
-    margin: 15px 0;
+    margin: 15px;
 }
 .container-skills {
     display: flex;
@@ -347,14 +349,14 @@ body {
 }
 .content-left ul li,
 .content-right ul li {
-    margin: 10px 0;
+    margin: 10px 50px;
     font-size: 1rem;
     line-height: 1.2;
     text-align: left;
     margin-left: 0px;
 }
 .content-right ul li {
-    margin-left: 5px;
+    margin: 10px;
 }
 }
 
@@ -367,7 +369,7 @@ body {
 
 #experience h2{
     font-size: 1.5rem;
-    margin: 20px 0;
+    margin: 15px 30px;
     color: #3986bd;
 }
 
@@ -417,7 +419,7 @@ body {
 @media screen and (max-width: 768px) {
     #experience h2{
         font-size: 1.2rem;
-        margin: 15px 0;
+        margin: 15px 20px;
     }
 
     #experience h3{
@@ -460,7 +462,7 @@ body {
 
 #education h2{
     font-size: 1.5rem;
-    margin: 20px 0;
+    margin: 20px 30px;
     color: #3986bd;
 }
 
@@ -500,7 +502,7 @@ body {
 @media screen and (max-width: 768px) {
     #education h2{
         font-size: 1.2rem;
-        margin: 15px 0;
+        margin: 15px 20px;
     }
 }
 /* Style for the certification section */
@@ -510,7 +512,7 @@ body {
 
 #certification h2{
     font-size: 1.5rem;
-    margin: 20px 0;
+    margin: 20px 30px;
     color: #3986bd;
 }
 
@@ -547,10 +549,10 @@ body {
 }
 
 /*Media querry for certification*/
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 768px) {
     #certification h2{
         font-size: 1.2rem;
-        margin: 15px 0;
+        margin: 15px 20px;
     }
 }
 /* Style for the certification section */
@@ -560,7 +562,7 @@ body {
 
 #project h2{
     font-size: 1.5rem;
-    margin: 20px 0;
+    margin: 20px 30px;
     color: #3986bd;
 }
 
@@ -605,7 +607,7 @@ body {
 @media screen and (max-width: 768px) {
     #project h2{
         font-size: 1.2rem;
-        margin: 15px 0;
+        margin: 15px 20px;
     }
 }
 
@@ -613,7 +615,7 @@ body {
 #footer {
     background-color: #3986bd;
     color: #fff;
-    padding: 20px 0;
+    padding: 20px;
     text-align: center;
     display: flex;
     flex-direction: row-reverse;
@@ -643,25 +645,25 @@ body {
 }
 
 /* Style for the Bio-Data section */
-.bio-data {
-    flex-basis: calc(50% - 10px); /* Two columns, with a small margin in between */
+/* .container-footer {
+    flex-basis: calc(50% - 10px);
     padding: 20px;
     text-align: center;
-    }
+    } */
 
-.bio-data h2 {
-    text-align: center;
-}
+/* .container-footer h3 {
+    text-align: right;
+} */
 /* Style for the Contact Me section */
 .contact {
     flex-basis: calc(50% - 10px); /* Two columns, with a small margin in between */
     padding: 20px;
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
 @media screen and (max-width: 768px){
     #footer {
-        padding: 20px 0;
+        padding: 20px 10px;
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -671,13 +673,15 @@ body {
     .container-footer p {
         font-size: 12px;
         margin-left: 0px;
-        padding: 10px;
+        padding: 0 30px;
         text-decoration: none;
         line-height: 1.5;
     }
     
     .container-footer h3{
-        text-align: center;
+        font-size: 1rem;
+        text-align: right;
+        margin: 0 200px;
     }
     
     .container-footer a{
