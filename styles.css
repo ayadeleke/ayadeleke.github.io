@@ -3,97 +3,44 @@
     padding: 0;
     box-sizing: border-box;
 }
-body {
+body, html {
     font-family: 'Poppins', sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
 }
-/*Styling dor the green backgroud at the landing page*/
-#banner{
-    
-    background: linear-gradient(rgba(3,0,0,0.2), #909292), url(./images/IT-Support.jpg);
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    height: 100vh;
-    padding: 100px 0;
-}
-
-.banner-text{
-    color: #fff;
-}
-/* Default styles for larger screens */
-.banner-text h1 {
-    font-size: 3rem;
-    font-family: 'Kalam';
-    margin: 10px 0;
-}
-
-.banner-text h2 {
-    font-size: 2rem;
-    font-family: 'Kalam';
-    margin: 0;
-}
-
-.banner-text p {
-    font-size: 1rem;
-    font-style: italic;
-    margin: 20px 0;
-}
-
-/* Media query for screens up to 768px */
-/* @media screen and (max-width: 768px) {
-    .banner-text{
-        padding-top: 450px;
-    }
-    
-    .banner-text h1 {
-        font-size: 200%; 
-    }
-
-    .banner-text h2 {
-        font-size: 1500%; 
-    }
-
-    .banner-text p {
-        font-size: 16px;
-    }
-} */
-
 
 /* Style for the navigation bar */
 .navbar {
-    background-color: #3986bd; /* Set the background color of the navbar */
+    background-color: #3986bd; 
     overflow: hidden;
-    position: fixed; /* Fixed position to keep it at the top of the viewport */
-    width: 100%; /* Take up the full width of the viewport */
-    z-index: 100; /* Ensure it's on top of other elements */
-  }
-  
-  /* Style for the navigation list items */
-  .nav-list {
-    list-style-type: none; /* Remove list bullet points */
+    position: fixed;
+    width: 100%; 
+    z-index: 100; 
+}
+.nav-list {
+    list-style-type: none; 
     margin: 0;
     padding: 10px;
-    overflow: hidden; /* Center the list items horizontally */
+    overflow: hidden;
     text-align: center;
-  }
-  
-  .nav-item {
-    display: inline-block; /* Display list items horizontally */
-    margin: 0 10px; /* Add spacing between list items */
+}
+.nav {
+    display: inline-block; 
+    margin: 0 10px;
     position: relative;
-  }
-  
+}
+
   /* Style for the navigation links */
-  .nav-item a {
-    color: #fff; /* Set link text color to white */
-    text-decoration: none; /* Remove underlines from links */
+.nav a {
+    color: #fff;
+    text-decoration: none;
     font-weight: bold;
     font-size: 16px;
-  }
-  
-  /* Style for the navigation icon button */
+}
+
+/* Style for the navigation icon button */
 .nav-icon {
-    display: none; /* Initially hide the navigation icon on larger screens */
+    display: none;
     background-color: #3986bd;
     border: none;
     color: #fff;
@@ -108,75 +55,99 @@ body {
 
 /* Media query to make the navbar responsive */
 @media screen and (max-width: 768px) {
-    .banner-text {
-        padding: 200px 0; /* Adjust as needed */
-    }
-
-    .banner-text h1 {
-        font-size: 2rem; /* Adjust as needed */
-    }
-
-    .banner-text h2 {
-        font-size: 1.5rem; /* Adjust as needed */
-    }
-
-    .banner-text p {
-        font-size: 14px; /* Adjust as needed */
-    }
-    .nav-list {
-      display: none; /* Hide the navigation list on small screens */
-      right: 0; /* Slide in from the right when active */
-    }
-
-    .nav-icon {
-      display: block;
-      margin-top: -10px; /* Display the navigation icon on small screens */
-    }
-
-    /* Show the navigation list when the navigation icon is clicked */
-    .nav-icon:focus + .nav-list,
-    .nav-list.active {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 50px;
-        right: 0;
-        background-color: #3986bd;
-        padding: 10px 20px;
-    }
-    .nav-item a {
-        font-size: 14px;
-    }
-    .navbar {
-        /* background-color: #3986bd; 
-        overflow: hidden;
-        position: fixed; 
-        width: 100%;
-        z-index: 100; */
-        padding: 10px 0;
-      }
+.header-text h1 {
+    font-size: 2rem; 
 }
 
-  
+.header-text h2 {
+    font-size: 1.5rem;
+}
+
+.header-text p {
+    font-size: 14px;
+}
+.nav-list {
+    display: none;
+    right: 0; 
+}
+
+.nav-icon {
+    display: block;
+    margin-top: -10px;
+}
+
+/* Show the navigation list when the navigation icon is clicked */
+.nav-icon:focus + .nav-list,
+.nav-list.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #3986bd;
+    padding: 10px 20px;
+}
+.nav a {
+    font-size: 14px;
+}
+.navbar {
+    padding: 10px 0;
+}
+}
+/*landing page background*/
+#header{
+    
+    background: linear-gradient(rgba(3,0,0,0.2), #909292), url(./images/IT-Support.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    height: 100vh;
+    padding: 100px 0;
+}
+
+.header-text{
+    color: #fff;
+    margin-top: 200px;
+}
+/* Default styles for larger screens */
+.header-text h1 {
+    font-size: 3rem;
+    font-family: 'Kalam';
+    margin: 10px 0;
+}
+
+.header-text h2 {
+    font-size: 2rem;
+    font-family: 'Kalam';
+    margin: 0;
+}
+
+.header-text p {
+    font-size: 1rem;
+    font-style: italic;
+    margin: 20px 0;
+}
+
+
 /* Style for the about section */
 .about{
     padding: 100px;
     margin: auto;
 }
-.container-who{
+.about-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
-.img-section{
+.potrait-section{
     flex: 1;
     text-align: center;
     opacity: 0;
     transform: translateY(50px);
     animation: slideIn 1s forwards;
 }
-.img-section img{
+.potrait-section img{
     max-width: 70%;
     height: auto;
     border-radius: 10px;
@@ -215,7 +186,6 @@ body {
     background-color: #508ebb;
 }
 
-/*This code sets the fade in action when the page is relaoded at Aims section*/
 @keyframes slideIn{
     from{
         opacity: 0;
@@ -267,28 +237,25 @@ body {
 }
 
 /* Style for the skills section */
-
 #skills h2{
     font-size: 1.5rem;
     margin: 20px 0;
     color: #3986bd;
     margin: 0 30px;
 }
-.container-skills {
+.skills-container {
     display: flex;
     flex-direction: wrap;
     justify-content: center;
     align-items: stretch;
     margin: 0 10px;
 }
-
-.container-skills h3{
+.skills-container h3{
     font-size: 1.2rem;
     margin: 15px 0;
 }
-
-.content-right,
-.content-left{
+.competence,
+.skill{
     flex: 1;
     margin: 20px;
     opacity: 0;
@@ -296,10 +263,8 @@ body {
     animation: fadeIn 1s forwards;
     animation-delay: 0.5s;
 }
-
-
-.content-left ul li,
-.content-right ul li {
+.skill ul li,
+.competence ul li {
     margin: 10px 15px;
     font-size: 1rem;
     line-height: 1.6;
@@ -307,7 +272,6 @@ body {
 
 }
 
-/*This code sets the fade in action when the page is relaoded at Aims section*/
 @keyframes slideIn{
     from{
         opacity: 0;
@@ -335,27 +299,26 @@ body {
     font-size: 1.2rem;
     margin: 15px 20px;
 }
-.container-skills {
+.skills-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
 }
-
-.container-skills h3{
+.skills-container h3{
     font-size: 1rem;
     margin: 15px 0;
     text-align: left;
 }
-.content-left ul li,
-.content-right ul li {
+.skill ul li,
+.competence ul li {
     margin: 10px 50px;
     font-size: 1rem;
     line-height: 1.2;
     text-align: left;
     margin-left: 0px;
 }
-.content-right ul li {
+.competence ul li {
     margin: 10px 0;
 }
 }
@@ -366,35 +329,13 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
 #experience h2{
     font-size: 1.5rem;
     margin: 15px 30px;
     color: #3986bd;
 }
-
-/* #experience h3{
-    font-size: 20px;
-    margin-bottom: 0;
-    line-height: 1;
-    margin-bottom: 3px;
-
-}
-
-#experience h4{
-    font-size: 18px;
-
-}
-
-#experience h5{
-    margin-bottom: 10px;
-    color: #555555;
-
-
-} */
-
 .content-experience {
-    flex-basis: calc(33.33% - 10px); /* 10px is the margin between columns */
+    flex-basis: calc(33.33% - 10px);
     margin-bottom: 20px;
     padding: 10px;
     padding-left: 35px;
@@ -403,53 +344,45 @@ body {
     text-align: left;
 
 }
-
 .content-experience ul li {
     margin: 10px 0;
     font-size: 1rem;
     line-height: 1.6;
     text-align: justify;
 }
-
 .content-experience {
-
     line-height:2;
 }
+
 /*Media querry for experience*/
 @media screen and (max-width: 768px) {
-    #experience h2{
-        font-size: 1.2rem;
-        margin: 15px 20px;
-    }
-
-    #experience h3{
+#experience h2{
+    font-size: 1.2rem;
+    margin: 15px 20px;
+}
+#experience h3{
     font-size: 17px;
     margin-bottom: 0;
     line-height: 1;
     margin-bottom: 3px;
     margin-left: -20px;
 }
-
 #experience h4{
     font-size: 14px;
     margin-left: -20px;
 }
-
 #experience h5{
     font-size: 12px;
     margin-bottom: 10px;
     margin-left: -18px;
-
 }
-
 .content-experience {
     flex-basis: 100%;
     margin: 20px 0;
 }
-
 .content-experience ul li {
     margin: 10px 0;
-    font-size: 1rem; /* Adjust as needed */
+    font-size: 1rem;
     line-height: 1.2;
     text-align: left;
 }
@@ -459,22 +392,19 @@ body {
 #education {
     margin: 20px 0;
 }
-
 #education h2{
     font-size: 1.5rem;
     margin: 20px 30px;
     color: #3986bd;
 }
-
-.container-education {
+.education-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     flex-direction: column;
 }
-
 .content-education {
-    flex-basis: calc(33.33% - 10px); /* 10px is the margin between columns */
+    flex-basis: calc(33.33% - 10px);
     margin: 20px 0;
     padding: 20px;
     border: 1px solid #ccc;
@@ -482,17 +412,14 @@ body {
     text-align: left;
     line-height: 1.5;
 }
-
 .content-education h3 {
     font-size: 1rem;
     font-weight: bold;
     margin: 10px 0;
 }
-
 .content-education h4 {
     font-size: 1rem;
 }
-
 .content-education h5 {
     font-size: 0.9rem;
     color: #555;
@@ -505,26 +432,24 @@ body {
         margin: 15px 20px;
     }
 }
+
 /* Style for the certification section */
 #certification {
     margin: 20px 0;
 }
-
 #certification h2{
     font-size: 1.5rem;
     margin: 20px 30px;
     color: #3986bd;
 }
-
 .container-certification {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     flex-direction: column;
 }
-
 .content-certification {
-    flex-basis: calc(33.33% - 10px); /* 10px is the margin between columns */
+    flex-basis: calc(33.33% - 10px);
     margin: 20px 0;
     padding: 20px;
     border: 1px solid #ccc;
@@ -532,17 +457,14 @@ body {
     text-align: left;
     line-height: 1.5;
 }
-
 .content-certification h3 {
     font-size: 1rem;
     font-weight: bold;
     margin: 10px 0;
 }
-
 .content-certification h4 {
     font-size: 1rem;
 }
-
 .content-certification h5 {
     font-size: 0.9rem;
     color: #555;
@@ -559,22 +481,19 @@ body {
 #project {
     margin: 20px 0;
 }
-
 #project h2{
     font-size: 1.5rem;
     margin: 20px 30px;
     color: #3986bd;
 }
-
-.container-project {
+.project-container {
     display: block;
     flex-wrap: wrap;
     justify-content: space-between;
     flex-direction: column;
 }
-
 .content-project {
-    flex-basis: calc(33.33% - 10px); /* 10px is the margin between columns */
+    flex-basis: calc(33.33% - 10px); 
     margin: 20px 0;
     padding: 20px;
     border: 1px solid #ccc;
@@ -582,22 +501,18 @@ body {
     text-align: left;
     line-height: 1.5;
 }
-
 .content-project h3 {
     font-size: 1rem;
     font-weight: bold;
     margin: 10px 0;
 }
-
 .content-project h4 {
     font-size: 1rem;
 }
-
 .content-project h5 {
     font-size: 0.9rem;
     color: #555;
 }
-
 #project .button{
     text-decoration: none;
     color: #555555;
@@ -620,77 +535,56 @@ body {
     display: flex;
     flex-direction: row-reverse;
 }
-
 .container-footer {
     max-width: 1200px;
     margin: 0 auto;
     display: flex; 
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }
-
 .container-footer p {
     margin: 10px;
     padding: 5px;
 }
-
 .container-footer h3{
     margin: 10px 0;
     text-align: center;
-    padding: 0 150px;
+    font-size: 1.3rem;
+    align-items: center;
 }
-
 .container-footer a{
     text-decoration: none;
     color: #f7f7f7;
 }
-
-/* Style for the Bio-Data section */
-/* .container-footer {
-    flex-basis: calc(50% - 10px);
-    padding: 20px;
-    text-align: center;
-    } */
-
-/* .container-footer h3 {
-    text-align: right;
-} */
-/* Style for the Contact Me section */
 .contact {
-    flex-basis: calc(50% - 10px); /* Two columns, with a small margin in between */
+    flex-basis: calc(50% - 10px); 
     padding: 20px;
     margin: 20px 0;
 }
 
 @media screen and (max-width: 768px){
-    #footer {
-        padding: 20px 10px;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    
-    .container-footer p {
-        font-size: 12px;
-        margin-left: 0px;
-        padding: 0 30px;
-        text-decoration: none;
-        line-height: 1.5;
-    }
-    
-    .container-footer h3{
-        font-size: 1rem;
-        text-align: right;
-
-    }
-    
-    .container-footer a{
-        text-decoration: none;
-        color: #fff;
-    }
+#footer {
+    padding: 20px 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
 }
-
+.container-footer p {
+    font-size: 10px;
+    margin-left: 0px;
+    padding: 0 30px;
+    text-decoration: none;
+    line-height: 1.5;
+}
+.container-footer h3{
+    font-size: 0.7rem;
+    text-align: center;
+}
+.container-footer a{
+    text-decoration: none;
+    color: #fff;
+}
+}
 .footer-copyright {
     font-size: 8px;
     bottom: 0;
