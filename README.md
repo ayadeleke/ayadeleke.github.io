@@ -14,7 +14,7 @@ Welcome to my Resume Website! This website serves as my digital portfolio, provi
 - **Projects:** Links to projects I've worked on.
 - **Contact:** Reach out to me through the provided contact form.
 
-Yout can view the website on the [link](ayadelek.github.io)
+You can view the website on the [link](ayadeleke.github.io)
 
 I'm always open to connecting with others. You can reach out to me through the following channels:
 
